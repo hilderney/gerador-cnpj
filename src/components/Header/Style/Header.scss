@@ -1,6 +1,36 @@
 header {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
     width: 100%;
     height: 60px;
     background-color: #556065;
+
+    .logo {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 1;
+        flex-grow: 0;
+        height: 60px;
+        width: 60px;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    .title {
+        display: flex;
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: auto;
+    }
+
+    .navbar-wrapper {
+        display: flex;
+        flex-shrink: 0;
+        flex-grow: 1;
+        width: 100%;
+    }
 }

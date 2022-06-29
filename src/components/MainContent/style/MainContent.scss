@@ -1,4 +1,8 @@
 .main-content {
     display: block;
     flex-grow: 1;
+    height: 100%;
+    max-height: calc(100vh - 90px);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
