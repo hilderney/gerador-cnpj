@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+import './style/MainContent.css';
+
 export function AppMainContent() {
     const [count, setCount] = useState(0);
     const [name, setName] = useState('Hello World!')

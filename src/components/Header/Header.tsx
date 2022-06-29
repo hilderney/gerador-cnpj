@@ -1,3 +1,5 @@
+import './Style/Header.css'
+
 export function AppHeader() {
     return (
         <header> 
