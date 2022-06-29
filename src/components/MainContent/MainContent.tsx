@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppRoutes } from "../../pages/Routes";
+import AppRoutes from "../../pages/Routes";
 
 import './style/MainContent.css';
 const AppMainContent: React.FC = () => {
