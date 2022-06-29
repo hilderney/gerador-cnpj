@@ -1,1 +1,10 @@
-{"version":3,"sources":["Contact.scss","Contact.css"],"names":[],"mappings":"AAAA;EACI,wBAAA;ACCJ","file":"Contact.css"}
+{
+  "version": 3,
+  "sources": [
+    "Contact.scss",
+    "Contact.css"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACI,wBAAA;ACCJ",
+  "file": "Contact.css"
+}

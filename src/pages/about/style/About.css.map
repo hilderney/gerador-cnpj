@@ -1,1 +1,10 @@
-{"version":3,"sources":["About.scss","About.css"],"names":[],"mappings":"AAAA;EACI,qBAAA;ACCJ","file":"About.css"}
+{
+  "version": 3,
+  "sources": [
+    "About.scss",
+    "About.css"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACI,qBAAA;ACCJ",
+  "file": "About.css"
+}
