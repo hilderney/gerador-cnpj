@@ -1,9 +1,12 @@
+import React from 'react'
 import './style/Footer.css';
 
-export function AppFooter() {
+const AppFooter: React.FC = () => {
     return(
         <footer>
             Footer
         </footer>
     )
 }
+
+export default AppFooter

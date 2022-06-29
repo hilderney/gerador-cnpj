@@ -1,7 +1,8 @@
+import React from 'react'
 import logo from '../../logo.svg'
 import './Style/Header.css'
 
-export function AppHeader() {
+const AppHeader: React.FC = () => {
     return (
         <header> 
             <div className="logo">
@@ -16,3 +17,5 @@ export function AppHeader() {
         </header>
     )
 }
+
+export default AppHeader

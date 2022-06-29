@@ -1,12 +1,11 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
 
-import { AppHeader } from './components/Header/Header'
-import { AppFooter } from './components/Footer/Footer'
-import { AppMainContent } from './components/MainContent/MainContent'
+import AppHeader from './components/Header/Header'
+import AppMainContent from './components/MainContent/MainContent'
+import AppFooter from './components/Footer/Footer'
 
-function App() {
-
+const App: React.FC = () => {
   return (
     <div className='app-wrapper'>
       <AppHeader></AppHeader>
@@ -16,4 +15,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
