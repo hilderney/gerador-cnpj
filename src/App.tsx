@@ -2,9 +2,9 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-import { AppHeader } from './components/Header'
-import { AppFooter } from './components/Footer'
-import { AppMainContent } from './components/MainContent'
+import { AppHeader } from './components/Header/Header'
+import { AppFooter } from './components/Footer/Footer'
+import { AppMainContent } from './components/MainContent/MainContent'
 
 function App() {
 
