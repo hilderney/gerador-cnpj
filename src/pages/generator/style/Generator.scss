@@ -1,3 +1,9 @@
 .generator {
-  background-color: gray;
+  background-color: transparent;
+
+  .panel {
+    display: flex;
+    flex-direction: row;
+    background: gray;
+  }
 }
