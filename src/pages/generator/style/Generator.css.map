@@ -1,10 +1,1 @@
-{
-  "version": 3,
-  "sources": [
-    "Generator.scss",
-    "Generator.css"
-  ],
-  "names": [],
-  "mappings": "AAAA;EACI,sBAAA;ACCJ",
-  "file": "Generator.css"
-}
+{"version":3,"sources":["Generator.scss","Generator.css"],"names":[],"mappings":"AAAA;EACE,6BAAA;ACCF;ADCE;EACE,aAAA;EACA,mBAAA;EACA,gBAAA;ACCJ;ADCI;EACE,aAAA;ACCN;ADEI;EACE,WAAA;ACAN;ADEM;EACE,iBAAA;EACA,sBAAA;EAEA,eAAA;ACDR;ADIM;EACE,iBAAA;EACA,SAAA;EACA,sBAAA;EACA,cAAA;ACFR;ADKM;EACE,WAAA;EACA,cAAA;EACA,iBAAA;ACHR","file":"Generator.css"}

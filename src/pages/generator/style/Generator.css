@@ -1,3 +1,30 @@
 .generator {
-  background-color: gray;
+  background-color: transparent;
+}
+.generator .panel {
+  display: flex;
+  flex-direction: row;
+  background: gray;
+}
+.generator .panel col {
+  display: flex;
+}
+.generator .panel .input-group {
+  width: auto;
+}
+.generator .panel .input-group input {
+  padding: 8px 16px;
+  border: 1px inset blue;
+  border-right: 0;
+}
+.generator .panel .input-group button {
+  padding: 8px 16px;
+  border: 0;
+  border: 1px inset blue;
+  border-left: 0;
+}
+.generator .panel .input-group label {
+  width: 100%;
+  display: block;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=Generator.css.map */

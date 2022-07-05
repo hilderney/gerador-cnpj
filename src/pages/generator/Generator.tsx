@@ -59,20 +59,22 @@ const Generator: React.FC = () => {
       <div className="panel">
 
         <div className="col">
-          <div className="input-group">
+          <div className="form-group">
             <label htmlFor=""> CNPJ </label>
-            <input
-              name='cnpj'
-              className='input-cnpj'
-              type="text"
-              onChange={onChange}
-              value={form.cnpj}
-            />
-            <button
-              onClick={() => generateDocument()}
-            >
-              Gerar Novo CNPJ
-            </button>
+            <div className="input-group">
+              <input
+                name='cnpj'
+                className='input-cnpj'
+                type="text"
+                onChange={onChange}
+                value={form.cnpj}
+              />
+              <button
+                onClick={() => generateDocument()}
+              >
+                Gerar Novo CNPJ
+              </button>
+            </div>
             <label htmlFor="" className="error"> {error}  </label>
           </div>
           <div className="input-group">
