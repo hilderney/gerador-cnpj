@@ -28,7 +28,6 @@ const GerarCnpj: any = () => {
     d2 = 0;
 
   resultado = '' + n1 + n2 + '.' + n3 + n4 + n5 + '.' + n6 + n7 + n8 + '/' + n9 + n10 + n11 + n12 + '-' + d1 + d2;
-  console.log('CNPJ gerado: ', resultado);
 
   return resultado;
 }
