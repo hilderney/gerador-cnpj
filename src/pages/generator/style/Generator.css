@@ -57,6 +57,9 @@
   outline: none;
   border-color: #734DFF;
 }
+.generator .panel input[type=number] {
+  padding-right: 0;
+}
 .generator .panel button {
   display: flex;
   padding: 8px 16px;
@@ -65,6 +68,9 @@
   background-color: #734DFF;
   color: #fff;
   border-radius: 4px;
+}
+.generator .panel button:hover {
+  background-color: #5324ff;
 }
 .generator .panel .input-group {
   display: flex;

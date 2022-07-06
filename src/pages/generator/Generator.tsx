@@ -87,7 +87,9 @@ const Generator: React.FC = () => {
             </div>
           </div>
           <div className="form-group">
-            <label htmlFor=""> Quantidade de Filiais </label>
+            <div className="labels">
+              <label htmlFor=""> Quantidade de Filiais </label>
+            </div>
             <input
               name='quantidadeFiliais'
               className='quantidade-filial' type="number"

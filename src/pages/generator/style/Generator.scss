@@ -70,6 +70,10 @@
       }
     }
 
+    input[type=number] {
+      padding-right: 0;
+    }
+
     button {
       display: flex;
       padding: $space $space-medium;
@@ -78,6 +82,10 @@
       background-color: $info;
       color: #fff;
       border-radius: $space-small;
+
+      &:hover {
+        background-color: darken($info, 8%);
+      }
     }
 
     .input-group {
