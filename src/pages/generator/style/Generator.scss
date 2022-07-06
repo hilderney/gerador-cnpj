@@ -1,37 +1,75 @@
+@import '../../../assets/styles/vars.scss';
+
 .generator {
+  display: flex;
+  justify-content: center;
   background-color: transparent;
 
   .panel {
     display: flex;
     flex-direction: row;
-    background: gray;
+    width: 80%;
+    padding: 40px;
+    background: $bg-light;
 
-    col {
+    .col {
       display: flex;
+      flex-direction: column;
+      padding: 0 8px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: stretch;
+    }
+
+    label {
+      width: 100%;
+      display: block;
+      font-size: .8rem;
+
+      &.error {
+        height: 16px;
+        font-size: 0.7rem;
+        padding-top: 2px;
+        text-align: right;
+        color: $danger;
+        background-color: transparent;
+      }
+    }
+
+    input {
+      display: flex;
+      padding: 8px 16px;
+      border: 1px inset blue;
+    }
+
+    button {
+      display: flex;
+      padding: 8px 16px;
+      border: 0;
+      border: 1px inset blue;
     }
 
     .input-group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
       width: auto;
 
       input {
-        padding: 8px 16px;
-        border: 1px inset blue;
-
+        flex-grow: 1;
         border-right: 0;
       }
 
       button {
-        padding: 8px 16px;
-        border: 0;
-        border: 1px inset blue;
+        flex-shrink: 1;
+        white-space: nowrap;
         border-left: 0;
       }
-
-      label {
-        width: 100%;
-        display: block;
-        font-size: .8rem;
-      }
     }
+
   }
 }

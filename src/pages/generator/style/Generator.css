@@ -1,30 +1,62 @@
 .generator {
+  display: flex;
+  justify-content: center;
   background-color: transparent;
 }
 .generator .panel {
   display: flex;
   flex-direction: row;
-  background: gray;
+  width: 80%;
+  padding: 40px;
+  background: #dfd;
 }
-.generator .panel col {
+.generator .panel .col {
   display: flex;
+  flex-direction: column;
+  padding: 0 8px;
 }
-.generator .panel .input-group {
-  width: auto;
+.generator .panel .form-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
 }
-.generator .panel .input-group input {
-  padding: 8px 16px;
-  border: 1px inset blue;
-  border-right: 0;
-}
-.generator .panel .input-group button {
-  padding: 8px 16px;
-  border: 0;
-  border: 1px inset blue;
-  border-left: 0;
-}
-.generator .panel .input-group label {
+.generator .panel label {
   width: 100%;
   display: block;
   font-size: 0.8rem;
+}
+.generator .panel label.error {
+  height: 16px;
+  font-size: 0.7rem;
+  padding-top: 2px;
+  text-align: right;
+  color: #FF3021;
+  background-color: transparent;
+}
+.generator .panel input {
+  display: flex;
+  padding: 8px 16px;
+  border: 1px inset blue;
+}
+.generator .panel button {
+  display: flex;
+  padding: 8px 16px;
+  border: 0;
+  border: 1px inset blue;
+}
+.generator .panel .input-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: auto;
+}
+.generator .panel .input-group input {
+  flex-grow: 1;
+  border-right: 0;
+}
+.generator .panel .input-group button {
+  flex-shrink: 1;
+  white-space: nowrap;
+  border-left: 0;
 }/*# sourceMappingURL=Generator.css.map */
