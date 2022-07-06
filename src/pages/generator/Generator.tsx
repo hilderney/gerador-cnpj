@@ -4,9 +4,14 @@ import GerarFiliais from '../../domain/cnpj/GerarFiliais';
 import ValidarCnpj from '../../domain/cnpj/ValidarCnpj';
 import './style/Generator.css'
 
-const initial: IFormCnpj = {
+const initialData: IFormCnpj = {
   cnpj: '',
   quantidadeFiliais: 0
+}
+
+const initialMessage: IMessage = {
+  content: '',
+  type: 'info'
 }
 
 // ( ) Gerar CNPJs Filiais
@@ -16,8 +21,8 @@ const initial: IFormCnpj = {
 
 const Generator: React.FC = () => {
 
-  const [form, setForm] = useState<IFormCnpj>(initial);
-  const [error, setError] = useState<string>('');
+  const [form, setForm] = useState<IFormCnpj>(initialData);
+  const [message, setMessage] = useState<IMessage>(initialMessage);
 
   function onChange(ev: any) {
     const { name, value } = ev.target;
@@ -39,9 +44,9 @@ const Generator: React.FC = () => {
     if (form.cnpj.length <= 14)
       return
     if (ValidarCnpj(form.cnpj))
-      setError('');
+      setMessage({ content: '', type: 'info' });
     else
-      setError('CNPJ inválido');
+      setMessage({ content: 'CNPJ inválido', type: 'error' });
 
   }, [form.cnpj])
 
@@ -60,7 +65,12 @@ const Generator: React.FC = () => {
 
         <div className="col">
           <div className="form-group">
-            <label htmlFor=""> CNPJ </label>
+            <div className="labels">
+              <label htmlFor=""> CNPJ </label>
+              <label htmlFor="" className={`message ${message.type}`}>
+                {message.content}
+              </label>
+            </div>
             <div className="input-group">
               <input
                 name='cnpj'
@@ -75,18 +85,15 @@ const Generator: React.FC = () => {
                 Gerar
               </button>
             </div>
-            <label htmlFor="" className="error"> {error}  </label>
           </div>
           <div className="form-group">
-            <div className="input-group">
-              <label htmlFor=""> Quantidade de Filiais </label>
-              <input
-                name='quantidadeFiliais'
-                className='quantidade-filial' type="number"
-                onChange={onChange}
-                value={form.quantidadeFiliais}
-              />
-            </div>
+            <label htmlFor=""> Quantidade de Filiais </label>
+            <input
+              name='quantidadeFiliais'
+              className='quantidade-filial' type="number"
+              onChange={onChange}
+              value={form.quantidadeFiliais}
+            />
           </div>
         </div>
 
@@ -106,7 +113,8 @@ interface IFormCnpj {
   cnpj: string,
   quantidadeFiliais: number
 }
-function GenarFiliais() {
-  throw new Error('Function not implemented.');
-}
 
+interface IMessage {
+  content: string,
+  type: 'error' | 'info'
+}

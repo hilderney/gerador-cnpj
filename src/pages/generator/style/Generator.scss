@@ -9,13 +9,13 @@
     display: flex;
     flex-direction: row;
     width: 80%;
-    padding: 40px;
+    padding: $space-large;
     background: $bg-light;
 
     .col {
       display: flex;
       flex-direction: column;
-      padding: 0 8px;
+      padding: 0 $space;
     }
 
     .form-group {
@@ -23,34 +23,61 @@
       flex-direction: column;
       flex-wrap: nowrap;
       align-content: stretch;
+      padding: $space-small;
+
+      input {
+        display: inline-block;
+      }
+    }
+
+    .labels {
+      display: flex;
+      align-items: flex-end;
     }
 
     label {
       width: 100%;
       display: block;
       font-size: .8rem;
+      padding: $space-small 0;
+      font-weight: 700;
+
+      &.message {
+        font-size: 0.7rem;
+        text-align: right;
+      }
 
       &.error {
-        height: 16px;
-        font-size: 0.7rem;
-        padding-top: 2px;
-        text-align: right;
         color: $danger;
-        background-color: transparent;
       }
+
+      &.info {
+        color: $info;
+      }
+
     }
 
     input {
-      display: flex;
-      padding: 8px 16px;
-      border: 1px inset blue;
+      display: inline-block;
+      padding: 0 $space;
+      line-height: calc($space * 4);
+      border: 2px inset lighten($info, 8%);
+      border-radius: $space-small;
+
+      &:focus-visible {
+        outline: none;
+        border-color: $info;
+      }
     }
 
     button {
       display: flex;
-      padding: 8px 16px;
+      padding: $space $space-medium;
       border: 0;
-      border: 1px inset blue;
+      border: 2px inset lighten($info, 8%);
+      background-color: $info;
+      color: #fff;
+      border-radius: $space-small;
     }
 
     .input-group {
@@ -61,13 +88,17 @@
 
       input {
         flex-grow: 1;
-        border-right: 0;
+        border-right-width: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
       }
 
       button {
         flex-shrink: 1;
         white-space: nowrap;
-        border-left: 0;
+        border-left-width: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
       }
     }
 

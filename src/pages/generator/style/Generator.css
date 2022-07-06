@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: row;
   width: 80%;
-  padding: 40px;
+  padding: 24px;
   background: #dfd;
 }
 .generator .panel .col {
@@ -20,30 +20,51 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: stretch;
+  padding: 4px;
+}
+.generator .panel .form-group input {
+  display: inline-block;
+}
+.generator .panel .labels {
+  display: flex;
+  align-items: flex-end;
 }
 .generator .panel label {
   width: 100%;
   display: block;
   font-size: 0.8rem;
+  padding: 4px 0;
+  font-weight: 700;
+}
+.generator .panel label.message {
+  font-size: 0.7rem;
+  text-align: right;
 }
 .generator .panel label.error {
-  height: 16px;
-  font-size: 0.7rem;
-  padding-top: 2px;
-  text-align: right;
   color: #FF3021;
-  background-color: transparent;
+}
+.generator .panel label.info {
+  color: #734DFF;
 }
 .generator .panel input {
-  display: flex;
-  padding: 8px 16px;
-  border: 1px inset blue;
+  display: inline-block;
+  padding: 0 8px;
+  line-height: 32px;
+  border: 2px inset #9376ff;
+  border-radius: 4px;
+}
+.generator .panel input:focus-visible {
+  outline: none;
+  border-color: #734DFF;
 }
 .generator .panel button {
   display: flex;
   padding: 8px 16px;
   border: 0;
-  border: 1px inset blue;
+  border: 2px inset #9376ff;
+  background-color: #734DFF;
+  color: #fff;
+  border-radius: 4px;
 }
 .generator .panel .input-group {
   display: flex;
@@ -53,10 +74,14 @@
 }
 .generator .panel .input-group input {
   flex-grow: 1;
-  border-right: 0;
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .generator .panel .input-group button {
   flex-shrink: 1;
   white-space: nowrap;
-  border-left: 0;
+  border-left-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }/*# sourceMappingURL=Generator.css.map */
