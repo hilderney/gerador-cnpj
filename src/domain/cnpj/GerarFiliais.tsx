@@ -1,11 +1,15 @@
 import React from 'react'
+import IFormCnpj from '../../interfaces/IFormCnpj.interface'
 
-const GerarFiliais: any = (quantidade: number) => {
+const GerarFiliais: any = (form: IFormCnpj) => {
 
-  if (quantidade <= 0)
+  if (form.quantidadeFiliais <= 0)
     return
 
-  console.log(`Preparar para gerar ${quantidade} filiais`)
+  debugger;
+  //const cnpjRoot =
+
+  console.log(`Preparar para gerar ${form.quantidadeFiliais} filiais`)
 }
 
 export default GerarFiliais

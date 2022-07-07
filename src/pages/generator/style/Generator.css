@@ -50,10 +50,20 @@
   display: inline-block;
   padding: 0 8px;
   line-height: 32px;
-  border: 2px inset #9376ff;
+  background-color: #fff;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #798c8c;
   border-radius: 4px;
 }
 .generator .panel input:focus-visible {
+  outline: none;
+  border-color: #677;
+}
+.generator .panel input.info {
+  border-color: #9376ff;
+}
+.generator .panel input.info:focus-visible {
   outline: none;
   border-color: #734DFF;
 }
@@ -64,12 +74,30 @@
   display: flex;
   padding: 8px 16px;
   border: 0;
-  border: 2px inset #9376ff;
-  background-color: #734DFF;
-  color: #fff;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #677;
   border-radius: 4px;
+  background-color: #798c8c;
+  color: #fff;
 }
 .generator .panel button:hover {
+  background-color: #536161;
+}
+.generator .panel button.icon {
+  background-color: #fff;
+  color: #333;
+  border-color: #ebebeb;
+}
+.generator .panel button.icon:hover {
+  background-color: #ebebeb;
+}
+.generator .panel button.info {
+  background-color: #734DFF;
+  color: #fff;
+  border-color: #9376ff;
+}
+.generator .panel button.info:hover {
   background-color: #5324ff;
 }
 .generator .panel .input-group {
@@ -90,6 +118,28 @@
   border-left-width: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+.generator .panel .input-group.info input {
+  border-color: #9376ff;
+}
+.generator .panel .input-group.info input:focus-visible {
+  outline: none;
+  border-color: #734DFF;
+}
+.generator .panel .input-group.info button {
+  background-color: #734DFF;
+  color: #fff;
+  border-color: #9376ff;
+}
+.generator .panel .input-group.info button:hover {
+  background-color: #5324ff;
+}
+.generator .panel .input-group.info button.icon {
+  background-color: #fff;
+  color: #333;
+}
+.generator .panel .input-group.info button.icon:hover {
+  background-color: #ebebeb;
 }
 .generator .panel .subsidiaries {
   margin-top: 24px;

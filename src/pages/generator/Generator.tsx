@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import GerarCnpj from '../../domain/cnpj/GerarCnpj';
 import GerarFiliais from '../../domain/cnpj/GerarFiliais';
 import ValidarCnpj from '../../domain/cnpj/ValidarCnpj';
+import IFormCnpj from '../../interfaces/IFormCnpj.interface';
+import IMessage from '../../interfaces/IMessage.intertface';
 import './style/Generator.css'
 
 const initialData: IFormCnpj = {
@@ -17,7 +19,6 @@ const initialMessage: IMessage = {
 // ( ) Gerar CNPJs Filiais
 // ( ) Validar CNPJs de Filiais
 // ( ) Arrumar Textos
-// ( ) Dar Aquele tapa no visual
 
 const Generator: React.FC = () => {
 
@@ -37,7 +38,7 @@ const Generator: React.FC = () => {
   }
 
   function generateSubsidiarys(): void {
-    GerarFiliais(form.quantidadeFiliais)
+    GerarFiliais(form)
   }
 
   useEffect(() => {
@@ -56,7 +57,7 @@ const Generator: React.FC = () => {
     if (form.quantidadeFiliais < 0)
       setForm({ ...form, quantidadeFiliais: 0 })
 
-    GerarFiliais(form.quantidadeFiliais)
+    GerarFiliais(form)
 
   }, [form.quantidadeFiliais])
 
@@ -73,7 +74,7 @@ const Generator: React.FC = () => {
                 {message.content}
               </label>
             </div>
-            <div className="input-group">
+            <div className="input-group info">
               <input
                 name='cnpj'
                 className='input-cnpj'
@@ -94,7 +95,7 @@ const Generator: React.FC = () => {
             </div>
             <input
               name='quantidadeFiliais'
-              className='quantidade-filial' type="number"
+              className='quantidade-filial info' type="number"
               onChange={onChange}
               value={form.quantidadeFiliais}
             />
@@ -108,9 +109,14 @@ const Generator: React.FC = () => {
                   <div className="labels">
                     <label htmlFor=""> Filial {index + 1} </label>
                   </div>
-                  <input className='filial' type="text"
-                    value={item}
-                  />
+                  <div className="input-group info">
+                    <input className='filial' type="text" readOnly
+                      value={item}
+                    />
+                    <button className='icon'
+                      onClick={() => generateDocument()}
+                    >Icon</button>
+                  </div>
                 </div>
               )
             })}
@@ -129,13 +135,3 @@ const Generator: React.FC = () => {
 }
 
 export default Generator
-
-interface IFormCnpj {
-  cnpj: string,
-  quantidadeFiliais: number
-}
-
-interface IMessage {
-  content: string,
-  type: 'error' | 'info'
-}

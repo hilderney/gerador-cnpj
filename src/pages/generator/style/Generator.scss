@@ -61,13 +61,27 @@
       display: inline-block;
       padding: 0 $space;
       line-height: calc($space * 4);
-      border: 2px inset lighten($info, 8%);
+      background-color: #fff;
+      border-width: 2px;
+      border-style: inset;
+      border-color: lighten($light-color, 8%);
       border-radius: $space-small;
 
       &:focus-visible {
         outline: none;
-        border-color: $info;
+        border-color: $light-color;
       }
+
+      &.info {
+        border-color: lighten($info, 8%);
+
+        &:focus-visible {
+          outline: none;
+          border-color: $info;
+        }
+      }
+
+
     }
 
     input[type=number] {
@@ -78,13 +92,35 @@
       display: flex;
       padding: $space $space-medium;
       border: 0;
-      border: 2px inset lighten($info, 8%);
-      background-color: $info;
-      color: #fff;
+      border-width: 2px;
+      border-style: inset;
+      border-color: $light-color;
       border-radius: $space-small;
+      background-color: lighten($light-color, 8%);
+      color: #fff;
 
       &:hover {
-        background-color: darken($info, 8%);
+        background-color: darken($light-color, 8%);
+      }
+
+      &.icon {
+        background-color: #fff;
+        color: $text-color;
+        border-color: darken(#fff, 8%);
+
+        &:hover {
+          background-color: darken(#fff, 8%);
+        }
+      }
+
+      &.info {
+        background-color: $info;
+        color: #fff;
+        border-color: lighten($info, 8%);
+
+        &:hover {
+          background-color: darken($info, 8%);
+        }
       }
     }
 
@@ -107,6 +143,36 @@
         border-left-width: 0;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+      }
+
+      &.info {
+        input {
+          border-color: lighten($info, 8%);
+
+          &:focus-visible {
+            outline: none;
+            border-color: $info;
+          }
+        }
+
+        button {
+          background-color: $info;
+          color: #fff;
+          border-color: lighten($info, 8%);
+
+          &:hover {
+            background-color: darken($info, 8%);
+          }
+
+          &.icon {
+            background-color: #fff;
+            color: $text-color;
+
+            &:hover {
+              background-color: darken(#fff, 8%);
+            }
+          }
+        }
       }
     }
 
