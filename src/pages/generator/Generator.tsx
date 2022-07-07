@@ -23,6 +23,7 @@ const Generator: React.FC = () => {
 
   const [form, setForm] = useState<IFormCnpj>(initialData);
   const [message, setMessage] = useState<IMessage>(initialMessage);
+  const [subsidiaries, setSubsidiaries] = useState<string[]>(['item 1', 'item 2']);
 
   function onChange(ev: any) {
     const { name, value } = ev.target;
@@ -64,6 +65,7 @@ const Generator: React.FC = () => {
       <div className="panel">
 
         <div className="col">
+          <h2>Gerador de CNPJ</h2>
           <div className="form-group">
             <div className="labels">
               <label htmlFor=""> CNPJ </label>
@@ -97,15 +99,32 @@ const Generator: React.FC = () => {
               value={form.quantidadeFiliais}
             />
           </div>
+
+          <div className={subsidiaries.length <= 0 ? 'subsidiaries d-none' : 'subsidiaries d-flex'}>
+            <h2>Filiais</h2>
+            {subsidiaries.map((item: string, index: number) => {
+              return (
+                <div className="form-group">
+                  <div className="labels">
+                    <label htmlFor=""> Filial {index + 1} </label>
+                  </div>
+                  <input className='filial' type="text"
+                    value={item}
+                  />
+                </div>
+              )
+            })}
+          </div>
         </div>
 
         <div className="col info">
+          <h2>Informativo</h2>
           <p>
             Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Paisis, filhis, espiritis santis. Cevadis im ampola pa arma uma pindureta.
           </p>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

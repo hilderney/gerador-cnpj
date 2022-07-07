@@ -110,5 +110,15 @@
       }
     }
 
+    .subsidiaries {
+      margin-top: $space-large;
+      display: flex;
+      flex-direction: column;
+
+      &.d-none {
+        display: none;
+      }
+    }
+
   }
 }

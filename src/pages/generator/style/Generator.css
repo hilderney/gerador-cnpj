@@ -90,4 +90,12 @@
   border-left-width: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+.generator .panel .subsidiaries {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.generator .panel .subsidiaries.d-none {
+  display: none;
 }/*# sourceMappingURL=Generator.css.map */
